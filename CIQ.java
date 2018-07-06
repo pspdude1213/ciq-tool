@@ -9,12 +9,12 @@ class CIQ {
     private int typeID;
 
     public CIQ (String name, String addr, String type, int conn, int peers) {
-    	this.setCIQName(name);
-	this.setIPAddress(addr);
-	this.setNodeType(type);
-    	this.setCIQNumConnections(conn);	
-    	this.setCIQNumPeers(peers);
-	this.setTypeID(0);
+    	this.CIQName = name;
+	this.IPAddress = addr;
+	this.nodeType = type;
+    	this.CIQNumConnections = conn;	
+    	this.CIQNumPeers = peers;
+	this.typeID = 0;
     }
     
     public String toString(){
@@ -27,7 +27,6 @@ class CIQ {
 	String temp = str.toUpperCase();
 	
 	switch(temp){
-	    //should use sets()
 	    case "PGW"  : this.typeID=1; break;
 	    case "MME"  : this.typeID=2; break;
 	    case "AAA"  : this.typeID=3; break;
@@ -126,5 +125,3 @@ class CIQ {
         scan.close();
     }
 }
-
-
